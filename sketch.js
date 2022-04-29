@@ -1,14 +1,15 @@
 let bgColor;
+let myDiv;
 
 function setup() {
   createCanvas(400, 400, WEBGL);
   bgColor = random(255); 
-  let myDiv = createDiv('Bye Your Life. Goodnight');
+
+  myDiv = createDiv('Bye Your Life. Goodnight');
   myDiv.style('font-family', 'Inconsolata');
-  myDiv.position(50, 100);
-}// six-digit hexadecimal RGB notation
-
-
+  myDiv.position(20, 50);
+  myDiv.style('background-color', '#fff');
+}
 
 function draw() {
   background(bgColor);
@@ -20,5 +21,7 @@ function draw() {
 
 function mousePressed() {
   bgColor = random(255); 
+  myDiv.position(random(255), random(255));
 }
+
 
